@@ -1,0 +1,27 @@
+Для сервера Zabbix:
+
+Сохраните скрипт как install-zabbix-server.sh
+Сделайте исполняемым: chmod +x install-zabbix-server.sh
+Запустите: sudo ./install-zabbix-server.sh
+Следуйте инструкциям на экране
+
+Для Linux клиентов:
+
+Сохраните скрипт как install-zabbix-agent.sh
+Сделайте исполняемым: chmod +x install-zabbix-agent.sh
+Запустите: sudo ./install-zabbix-agent.sh
+Введите параметры сервера и хоста
+
+Для Windows клиентов:
+
+Сохраните скрипт как install-zabbix-agent.ps1
+Запустите PowerShell от имени администратора
+Выполните: Set-ExecutionPolicy RemoteSigned -Force
+Запустите: .\install-zabbix-agent.ps1
+
+Для автоматического добавления хостов:
+
+Установите Python 3 и библиотеки: pip install requests
+Сохраните Python скрипт как zabbix_api.py
+Подготовьте CSV файл с хостами
+Запустите: python zabbix_api.py --url http://zabbix-server --password пароль bulk-add --file hosts.csv
